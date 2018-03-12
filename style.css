@@ -14,19 +14,7 @@ body {
 	background-color: #1e73be;
 	font-family: 'Roboto';
 	color: white;
-	/*animation-name: bg-gradient-italian-flag;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;*/
 }
-
-/*@keyframes bg-gradient-italian-flag {
-	from{
-		background: linear-gradient(45deg, rgb(61, 71, 141),rgb(71, 181, 115));
-	}
-	to{
-		background: linear-gradient(red,black);
-	}
-}*/
 #app > .container{
 	height: 20%;
 }
