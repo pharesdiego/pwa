@@ -32,7 +32,6 @@ self.addEventListener('install', event => {
 // fetch files from cache
 self.addEventListener('fetch', event => {
 
-  console.log(request)
   event.respondWith(
     caches.match(event.request)
       .then(
