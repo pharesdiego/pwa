@@ -7,10 +7,9 @@ var FILES = [
   './manifest.json',
   'https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto',
   'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'
-];
-
+]
+// caches = cacheStorage API
 self.addEventListener('install', event => {
-
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(
@@ -19,24 +18,19 @@ self.addEventListener('install', event => {
   )
 
   // update caches
-  caches.keys().then(cachesName => cachesName.map(name => {
+  caches.keys().then(cacheName => cacheName.map(name => {
     if(name != CACHE_NAME) {
       return caches.delete(name);
     }
   }))
-
 })
-
-
 
 // fetch files from cache
 self.addEventListener('fetch', event => {
-
   event.respondWith(
     caches.match(event.request)
       .then(
         response => (response) ? response : fetch(event.request)
       )
   )
-
 })
