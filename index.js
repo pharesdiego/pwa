@@ -4,4 +4,3 @@ if('serviceWorker' in navigator){
       .then(_ => console.log('registered sw'))
       .catch(err => console.log('error: ', err))
 }
-console.log(self)

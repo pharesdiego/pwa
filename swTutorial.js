@@ -1,4 +1,4 @@
-var CACHE_NAME = 'italian-coders-v2'
+var CACHE_NAME = 'italian-coders-v3'
 
 var FILES = [
 	'./index.html',
